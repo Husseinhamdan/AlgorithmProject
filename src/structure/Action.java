@@ -7,6 +7,7 @@ public class Action {
 
     Initialize initialize;
 
+
     public Action() {
         initialize = new Initialize();
     }
@@ -60,14 +61,12 @@ public class Action {
         // next Street
         int numStreet = state.getStation().getNum();
         Street Nextstreet = this.initialize.getStreets().get(numStreet);
-        System.out.println(numStreet);
 //        bre Street
         Street breStreet = this.initialize.getStreets().get(numStreet - 1);
 //        Student of Current State
         Student currStudent = state.getStudent();
 //     check if can use Bus or taxi
         if (Nextstreet.isIfTransport()) {
-            System.out.println("transport");
             //State 1 Transport service Bus
             int many1 = 0;
             double time1 = 0;
