@@ -1,20 +1,19 @@
 import Strategy.Astar;
-import Strategy.BFS;
-import Strategy.DFS;
 import structure.Action;
-import structure.Initialize;
-import structure.Street;
-import structure.TransportType;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("select heuristic number: ");
+        System.out.println("1-only fast time");
+        System.out.println("2-only lower cost");
+        System.out.println("3-only higher health ");
+        System.out.println("4- fast time - low cost - high health");
         Scanner sc = new Scanner(System.in);    //System.in is a standard input stream
-        Action action=new Action();
-//        BFS bfs=new BFS();
-//        bfs.search();
-        Astar astar=new Astar();
+        System.out.println("Enter number :");
+        int num=sc.nextInt();
+        Astar astar=new Astar(num);
         astar.search();
 
     }

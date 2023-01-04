@@ -13,9 +13,11 @@ public class Astar {
     public PriorityQueue<State> pQueue;
     public HashMap<Integer, State> visited;
     Scanner sc = new Scanner(System.in);    //System.in is a standard input stream
+    int num;
 
-    public Astar() {
-        action = new Action();
+    public Astar(int num) {
+        this.num = num;
+        action = new Action(num);
         this.start = action.getStartState();
         visited = new HashMap<Integer, State>();
         this.depthTree = 1;
@@ -41,7 +43,7 @@ public class Astar {
     public boolean search() {
         long startTime = System.nanoTime();
         State node = start;
-        setPQueue(new AstarComparator1());
+        setPQueue(new AstarComparator(this.num));
         pQueue.add(node);
         while (!(pQueue.isEmpty())) {
             node = pQueue.poll();
@@ -85,6 +87,7 @@ public class Astar {
                     visited.get(temp.hashCode()).setTotalCost(temp.getTotalCost());
                     visited.get(temp.hashCode()).setParent(temp.getParent());
                 } else continue;
+
 
             }
 

@@ -11,13 +11,12 @@ public class Initialize {
     int serviceBusCost;
     int taxiCost;
     int walkCost;
-
     public Initialize() {
-        this.stations=new HashMap<>();
-        this.streets=new HashMap<>();
-        this.serviceBusCost=400;
-        this.taxiCost=1000;
-        this.walkCost=0;
+        this.stations = new HashMap<>();
+        this.streets = new HashMap<>();
+        this.serviceBusCost = 400;
+        this.taxiCost = 1000;
+        this.walkCost = 0;
         InitializeStation();
         InitializeStreet();
         InitializeTransport();
@@ -25,14 +24,14 @@ public class Initialize {
 
     //    Initialize Station
     public void InitializeStation() {
-        stations.put(1, new Station(1,"collage", 0.083, 0.016));
-        stations.put(2, new Station(2,"Parking", 0.16, 0.083));
-        stations.put(3, new Station(3,"bab sharqi", 0.16, 0.083));
-        stations.put(4, new Station(4,"bab toma", 0.083, 0.083));
-        stations.put(5, new Station(5,"sahet alabaseen", 0.03, 0));
-        stations.put(6, new Station(6,"karagat alabaseen", 0.25, 0.083));
-        stations.put(7, new Station(7,"adra", 0, 0.083));
-        stations.put(8, new Station(8,"my home", 0, 0));
+        stations.put(1, new Station(1, "collage", 0.083, 0.016));
+        stations.put(2, new Station(2, "Parking", 0.16, 0.083));
+        stations.put(3, new Station(3, "bab sharqi", 0.16, 0.083));
+        stations.put(4, new Station(4, "bab toma", 0.083, 0.083));
+        stations.put(5, new Station(5, "sahet alabaseen", 0.03, 0));
+        stations.put(6, new Station(6, "karagat alabaseen", 0.25, 0.083));
+        stations.put(7, new Station(7, "adra", 0, 0.083));
+        stations.put(8, new Station(8, "my home", 0, 0));
     }
 
     //    Initialize Streets
@@ -57,23 +56,6 @@ public class Initialize {
         streets.get(4).setServiceBus(serviceBus1);
         streets.get(5).setServiceBus(serviceBus1);
         streets.get(6).setServiceBus(serviceBus2);
-//        Taxi
-        Taxi taxi = new Taxi(taxiCost);
-        streets.get(2).setTaxi(taxi);
-        streets.get(3).setTaxi(taxi);
-        streets.get(4).setTaxi(taxi);
-        streets.get(5).setTaxi(taxi);
-        streets.get(6).setTaxi(taxi);
-//        Walk
-        Walk walk = new Walk(walkCost);
-        streets.get(1).setWalk(walk);
-        streets.get(2).setWalk(walk);
-        streets.get(3).setWalk(walk);
-        streets.get(4).setWalk(walk);
-        streets.get(5).setWalk(walk);
-        streets.get(6).setWalk(walk);
-        streets.get(7).setWalk(walk);
-
 
 
     }

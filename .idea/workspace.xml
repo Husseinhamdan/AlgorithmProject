@@ -5,14 +5,26 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmProject/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/Strategy/Astar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmProject/Strategy/Astar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/Strategy/AstarComparator1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmProject/Strategy/AstarComparator1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/Strategy/AstarComparator1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/Strategy/BFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/Strategy/DFS.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/Initialize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/Initialize.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/Street.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/Street.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/Taxi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmProject/structure/Walk.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Strategy/Astar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Strategy/Astar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Strategy/AstarComparator1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Strategy/AstarComparator1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Strategy/AstarComparator1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Strategy/AstarComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Strategy/BFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Strategy/DFS.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/structure/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structure/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structure/Initialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structure/Initialize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/structure/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structure/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structure/Street.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/structure/Street.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structure/Taxi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structure/Walk.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Strategy/Astar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" selection-start-line="14" selection-start-column="4" selection-end-line="15" />
+            <state relative-caret-position="169">
+              <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,23 +51,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/structure/Taxi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="e#81#82#0" expanded="true" />
-                <element signature="e#113#114#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/structure/Action.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2043">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="40">
+              <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,17 +65,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/structure/Street.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+            <state relative-caret-position="1180">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Strategy/AstarComparator1.java">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+            <state relative-caret-position="220">
+              <caret line="11" column="65" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,22 +84,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/structure/Initialize.java">
+        <entry file="file://$PROJECT_DIR$/src/Strategy/AstarComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="74" column="37" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="74" selection-end-column="37" />
+            <state relative-caret-position="-157">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#226#227#0" expanded="true" />
+                <element signature="e#249#250#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Strategy/Path.java">
+        <entry file="file://$PROJECT_DIR$/src/structure/Station.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            <state relative-caret-position="500">
+              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/structure/Initialize.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -117,10 +131,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/structure/State.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="133" selection-start-line="133" selection-end-line="133" />
+            <state relative-caret-position="20">
+              <caret line="128" column="94" selection-start-line="128" selection-start-column="94" selection-end-line="128" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#840#841#0" expanded="true" />
+                <element signature="e#3273#3274#0" expanded="true" />
+                <element signature="e#3323#3324#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,23 +190,29 @@
         <option value="$PROJECT_DIR$/src/structure/Taxi.java" />
         <option value="$PROJECT_DIR$/src/structure/Walk.java" />
         <option value="$PROJECT_DIR$/src/structure/TransportType.java" />
-        <option value="$PROJECT_DIR$/src/structure/Street.java" />
-        <option value="$PROJECT_DIR$/src/Strategy/AstarComparator.java" />
         <option value="$PROJECT_DIR$/src/Strategy/Path.java" />
         <option value="$PROJECT_DIR$/src/Strategy/DFS.java" />
         <option value="$PROJECT_DIR$/src/structure/Station.java" />
         <option value="$PROJECT_DIR$/src/structure/Student.java" />
         <option value="$PROJECT_DIR$/src/Strategy/BFS.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Strategy/AstarComparator1.java" />
-        <option value="$PROJECT_DIR$/src/Strategy/Astar.java" />
-        <option value="$PROJECT_DIR$/src/structure/State.java" />
-        <option value="$PROJECT_DIR$/src/structure/Action.java" />
+        <option value="$PROJECT_DIR$/src/structure/Street.java" />
         <option value="$PROJECT_DIR$/src/structure/Initialize.java" />
+        <option value="$PROJECT_DIR$/src/structure/Action.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/structure/State.java" />
+        <option value="$PROJECT_DIR$/src/Strategy/Astar.java" />
+        <option value="$PROJECT_DIR$/src/Strategy/AstarComparator.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -198,7 +224,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,6 +252,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,12 +346,14 @@
       <workItem from="1672762886724" duration="1710000" />
       <workItem from="1672820699879" duration="2573000" />
       <workItem from="1672828901871" duration="1819000" />
-      <workItem from="1672843778957" duration="293000" />
+      <workItem from="1672843778957" duration="6942000" />
+      <workItem from="1672855045301" duration="2634000" />
+      <workItem from="1672862719837" duration="1951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76899000" />
+    <option name="totallyTimeSpent" value="88133000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -337,10 +365,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2624811" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2700454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -349,7 +376,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.5433715" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.8232406" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -365,7 +392,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32980332" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
@@ -414,23 +441,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/structure/Transport.java" />
-    <entry file="file://$PROJECT_DIR$/src/structure/Walk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strategy/DFS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structure/Walk.java" />
+    <entry file="file://$PROJECT_DIR$/src/Strategy/DFS.java" />
     <entry file="jar://C:/Program Files/Java/jdk-19/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -442,34 +454,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/structure/Station.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="9" selection-start-line="14" selection-start-column="2" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strategy/BFS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strategy/BFS.java" />
     <entry file="jar://C:/Program Files/Java/jdk-19/lib/src.zip!/java.base/java/util/Comparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1740">
@@ -487,6 +472,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/structure/Taxi.java" />
+    <entry file="file://$PROJECT_DIR$/src/structure/Street.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1180">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structure/Station.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structure/Initialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structure/ServiceBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/structure/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -498,10 +516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strategy/Astar.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" selection-start-line="14" selection-start-column="4" selection-end-line="15" />
+        <state relative-caret-position="220">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -510,63 +528,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/structure/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="20">
+          <caret line="128" column="94" selection-start-line="128" selection-start-column="94" selection-end-line="128" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#3273#3274#0" expanded="true" />
+            <element signature="e#3323#3324#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Strategy/AstarComparator1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/structure/Street.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/structure/ServiceBus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/structure/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2043">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="40">
+          <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/structure/Taxi.java">
+    <entry file="file://$PROJECT_DIR$/src/Strategy/Astar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="169">
+          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding>
-            <element signature="e#81#82#0" expanded="true" />
-            <element signature="e#113#114#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/structure/Initialize.java">
+    <entry file="file://$PROJECT_DIR$/src/Strategy/AstarComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="74" column="37" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="74" selection-end-column="37" />
+        <state relative-caret-position="-157">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -9,26 +9,27 @@ public class Street {
     private double TaxiSpeed;
     private double StudentSpeed;
     private ServiceBus serviceBus;
-    private Taxi taxi;
-    private Walk walk;
 
 
-    public Street(Station station1, Station station2,int distance,boolean ifTransport) {
+    public Street(Station station1, Station station2, int distance, boolean ifTransport) {
         this.station1 = station1;
         this.station2 = station2;
-        this.ifTransport=ifTransport;
-        this.distance=distance;
-        this.BusSpeed=80;
-        this.TaxiSpeed=100;
-        this.StudentSpeed=5.5;
+        this.ifTransport = ifTransport;
+        this.distance = distance;
+        this.BusSpeed = 80;
+        this.TaxiSpeed = 100;
+        this.StudentSpeed = 5.5;
     }
-    public Street(Street street){
-        this(street.getStation1(),street.station2,street.getDistance(),street.ifTransport);
+
+    public Street(Street street) {
+        this(street.getStation1(), street.station2, street.getDistance(), street.ifTransport);
     }
-    public Station getFirstStation(){
+
+    public Station getFirstStation() {
         return this.station1;
     }
-    public Station getSecondStation(){
+
+    public Station getSecondStation() {
         return this.station2;
     }
 
@@ -88,21 +89,6 @@ public class Street {
         this.serviceBus = serviceBus;
     }
 
-    public Taxi getTaxi() {
-        return taxi;
-    }
-
-    public void setTaxi(Taxi taxi) {
-        this.taxi = taxi;
-    }
-
-    public Walk getWalk() {
-        return walk;
-    }
-
-    public void setWalk(Walk walk) {
-        this.walk = walk;
-    }
 
     public double getStudentSpeed() {
         return StudentSpeed;

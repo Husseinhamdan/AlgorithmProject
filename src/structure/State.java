@@ -9,33 +9,33 @@ public class State {
     State Parent;
     List<State> states;
     TransportType transportType;
-    double Cost;
-    double Costofpath;
-    double heuristic;
+    int traveledDistance;
+    int Distance;
+    int TotalDistance;
+    double heuristic = 0;
     double TotalCost;
 
-
-    public State(Station station, Student student, TransportType type) {
+    public State(Station station, Student student, int totalDistance, TransportType type) {
         this.station = station;
         this.student = student;
         this.transportType = type;
-        calculateCost();
-        this.Costofpath = 0;
+        this.traveledDistance = 0;
+        this.Distance = 0;
+        this.TotalDistance = totalDistance;
     }
 
-    public void calculateCost() {
-        double Cost = this.getStudent().getTime();
-        this.setCost(Cost);
+    public void setTraveledDistance() {
+        this.traveledDistance = this.getParent().traveledDistance + this.Distance;
     }
 
-    public void calculateCostofpath() {
-        double Costofpath = this.Parent.getCostofpath() + this.Cost;
-        this.setCostofpath(Costofpath);
+    public void setDistance(int distance) {
+        this.Distance = distance;
     }
-    public void calculateTotalCost(int num) {
-        calculateCostofpath();
-        double TotalCost =this.getCostofpath();//+getHeuristic(num);
-        this.setTotalCost(TotalCost);
+
+    public void CalcTotalCost(int num) {
+        int remainDistance = this.TotalDistance - this.traveledDistance;
+        this.setHeuristic(num, remainDistance);
+        this.TotalCost = student.getMany()+student.getHealth()+student.getTime() + this.heuristic;
     }
 
     public void printState() {
@@ -48,6 +48,11 @@ public class State {
         else if (this.getTransportType() == TransportType.TAXI)
             System.out.println("Transport Type: Taxi");
         else System.out.println("Transport Type: Walk");
+//        System.out.println("Total Distance :" + this.TotalDistance);
+//        System.out.println("Travel Distance :" + this.traveledDistance);
+//        System.out.println("Distance :" + this.Distance);
+//        System.out.println("h: " + this.heuristic);
+//        System.out.println("Total Cost:" + this.TotalCost);
     }
 
     @Override
@@ -55,8 +60,7 @@ public class State {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         State state = (State) o;
-        return Double.compare(state.Cost, Cost) == 0 &&
-                station.equals(state.station) &&
+        return station.equals(state.station) &&
                 student.equals(state.student) &&
                 Parent.equals(state.Parent) &&
                 states.equals(state.states) &&
@@ -65,11 +69,11 @@ public class State {
 
     @Override
     public int hashCode() {
-        return Objects.hash(station, student, Parent, states, transportType, Cost);
+        return Objects.hash(station, student, Parent, states, transportType);
     }
 
     public State(State state) {
-        this(state.station, state.student, state.transportType);
+        this(state.station, state.student, state.TotalDistance, state.transportType);
     }
 
     public Station getStation() {
@@ -112,39 +116,42 @@ public class State {
         Parent = parent;
     }
 
-    public double getCost() {
-        return Cost;
-    }
+    public void setHeuristic(int num, int remainDistance) {
 
-    public void setCost(double totalCost) {
-        Cost = totalCost;
-    }
+        switch (num) {
+            case 1: {
+//                1-only faster time
+                this.heuristic = (remainDistance * student.getTime()) / this.traveledDistance;
+            }
+            break;
+            case 2: {
+//                2-only lower cost
+                this.heuristic = (remainDistance * student.getMany()) / this.traveledDistance;
 
-    public double getCostofpath() {
-        return Costofpath;
-    }
+            }
+            break;
+            case 3: {
+//                3-only higher health
+                this.heuristic = (remainDistance * student.getHealth()) / this.traveledDistance;
 
-    public void setCostofpath(double costofpath) {
-        this.Costofpath = costofpath;
-    }
 
-    public double getHeuristic(int num) {
-        switch (num){
-            case 1:{
+            }
+            break;
+            case 4: {
+//                4- fast time - low cost - high health
+                double time = (remainDistance * student.getTime()) / this.traveledDistance;
+                double health = (remainDistance * student.getHealth()) / this.traveledDistance;
+                double many = (remainDistance * student.getMany()) / this.traveledDistance;
+                this.heuristic = time + health + many;
 
-            }break;
-            case 2:{
-
-            }break;
-            case 3:{
-
-            }break;
+            }
+            break;
         }
-        return heuristic;
+
     }
 
-    public void setHeuristic(double heuristic) {
-        this.heuristic = heuristic;
+    public double getHeuristic() {
+        return heuristic;
     }
 
     public double getTotalCost() {

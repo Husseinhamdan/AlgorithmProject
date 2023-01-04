@@ -1,15 +1,18 @@
 package structure;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Action {
 
     Initialize initialize;
+    int num;
 
+    public Action(int num) {
 
-    public Action() {
         initialize = new Initialize();
+        this.num = num;
     }
 
     public double getMoveTime(Street street, TransportType type) {
@@ -52,6 +55,15 @@ public class Action {
         return many;
     }
 
+    public int getTotalDistance() {
+        int distanc = 0;
+        HashMap<Integer, Street> streets = initialize.getStreets();
+        for (int i = 1; i <= streets.size(); i++) {
+            distanc += streets.get(i).getDistance();
+        }
+        return distanc;
+    }
+
     public List<State> getNext(State state) {
 
         List<State> getNext = new ArrayList<>();
@@ -83,14 +95,19 @@ public class Action {
 
             }
             int health1 = currStudent.getHealth() + getHealth(Nextstreet, TransportType.SERVICE_BUS);
-
-            if (health1 > 0 && health1 <= 100 && many1 > 0 && many1 <= getStartState().getStudent().getMany()) {
-                Student student1 = new Student(many1, health1, time1);
-                State state1 = new State(NextStation, student1, TransportType.SERVICE_BUS);
-                state1.setParent(state);
-                getNext.add(state1);
-
+            if (health1>100){
+                health1=100;
             }
+                if (health1 > 0 && health1 <= 100 && many1 > 0 && many1 <= getStartState().getStudent().getMany()) {
+                    Student student1 = new Student(many1, health1, time1);
+                    State state1 = new State(NextStation, student1, getTotalDistance(), TransportType.SERVICE_BUS);
+                    state1.setParent(state);
+                    state1.setDistance(Nextstreet.getDistance());
+                    state1.setTraveledDistance();
+                    state1.CalcTotalCost(this.num);
+                    getNext.add(state1);
+
+                }
             // State 2  Transport Taxi
             int many2 = currStudent.getMany() - getMany(Nextstreet, TransportType.TAXI);
             int health2 = currStudent.getHealth() + getHealth(Nextstreet, TransportType.TAXI);
@@ -105,11 +122,16 @@ public class Action {
 
 
             }
-
+            if (health2>100){
+                health2=100;
+            }
             if (health2 > 0 && health2 <= 100 && many2 > 0 && many2 <= getStartState().getStudent().getMany()) {
                 Student student2 = new Student(many2, health2, time2);
-                State state2 = new State(NextStation, student2, TransportType.TAXI);
+                State state2 = new State(NextStation, student2, getTotalDistance(), TransportType.TAXI);
                 state2.setParent(state);
+                state2.setDistance(Nextstreet.getDistance());
+                state2.setTraveledDistance();
+                state2.CalcTotalCost(this.num);
                 getNext.add(state2);
             }
         }
@@ -118,10 +140,16 @@ public class Action {
         int health3 = currStudent.getHealth() + getHealth(Nextstreet, TransportType.WALK);
         double time3 = currStudent.getTime() + getMoveTime(Nextstreet, TransportType.WALK);
 //        System.out.println("health: "+health3+" "+"many: "+many3+" "+"time: "+time3);
+        if (health3>100){
+            health3=100;
+        }
         if (health3 > 0 && health3 <= 100 && many3 > 0 && many3 <= getStartState().getStudent().getMany()) {
             Student student3 = new Student(many3, health3, time3);
-            State state3 = new State(NextStation, student3, TransportType.WALK);
+            State state3 = new State(NextStation, student3, getTotalDistance(), TransportType.WALK);
             state3.setParent(state);
+            state3.setDistance(Nextstreet.getDistance());
+            state3.setTraveledDistance();
+            state3.CalcTotalCost(this.num);
             getNext.add(state3);
         }
         return getNext;
@@ -129,8 +157,8 @@ public class Action {
 
     public State getStartState() {
         Station station = getInitialize().getStations().get(1);
-        Student student = new Student(1000, 100, 0);
-        State state = new State(station, student, TransportType.WALK);
+        Student student = new Student(18000, 100, 0);
+        State state = new State(station, student, getTotalDistance(), TransportType.WALK);
         return state;
     }
 
